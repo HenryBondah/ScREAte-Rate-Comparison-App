@@ -42899,7 +42899,7 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-image-1 {
   width: 89px;
   height: 61px;
-  margin: 6px auto 0 -34px;
+  margin: 5px auto 0 7px;
 }
 
 .u-header .u-logo-image-1 {
@@ -42910,7 +42910,7 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-text-1 {
   font-weight: 700;
   font-size: 1rem;
-  margin: -61px 42px 0 auto;
+  margin: -59px 42px 0 auto;
 }
 
 .u-header .u-btn-1 {
@@ -42922,8 +42922,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 1199px) {
   .u-header .u-image-1 {
-    margin-top: -26px;
-    margin-left: -34px;
+    margin-top: 0;
+    margin-left: 12px;
   }
 
   .u-header .u-logo-image-1 {
@@ -42933,7 +42933,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-text-1 {
     width: auto;
-    margin-top: -32px;
+    margin-top: -58px;
     margin-right: 32px;
   }
 
@@ -42944,61 +42944,64 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 991px) {
+  .u-header .u-sheet-1 {
+    min-height: 61px;
+  }
+
   .u-header .u-image-1 {
     width: 90px;
     height: 60px;
-    margin-top: 5px;
     margin-left: 0;
   }
 
   .u-header .u-text-1 {
     font-size: 0.875rem;
-    margin-top: -60px;
+    margin-top: -58px;
     margin-right: 23px;
   }
 
   .u-header .u-btn-1 {
     font-size: 0.75rem;
-    margin-top: 0;
     margin-right: 10px;
-    margin-bottom: 29px;
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 767px) {
   .u-header .u-image-1 {
-    width: auto;
+    width: 64px;
+    margin-top: 1px;
   }
 
   .u-header .u-text-1 {
+    margin-top: -60px;
     margin-right: 13px;
   }
 
   .u-header .u-btn-1 {
     margin-right: 0;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {
-    min-height: 72px;
+    min-height: 63px;
   }
 
   .u-header .u-image-1 {
-    width: 57px;
+    width: 56px;
     height: 53px;
-    margin-top: 8px;
-    margin-left: -28px;
+    margin-top: 5px;
   }
 
   .u-header .u-text-1 {
     font-size: 0.75rem;
     margin-top: -53px;
-    margin-right: 0;
+    margin-right: 8px;
   }
 
   .u-header .u-btn-1 {
     font-size: 0.625rem;
-    margin-right: -8px;
-    margin-bottom: 33px;
+    margin-bottom: 26px;
   }
 }
  .u-footer {
