@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <title>Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen">
 <link rel="stylesheet" href="Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -67,19 +68,15 @@
       </div>
       <div class="custom-expanded u-custom-color-2 u-form u-radius-13 u-form-1">
         <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-horizontal u-form-spacing-6 u-inner-form" style="padding: 9px;" source="email">
-          <div class="u-form-email u-form-group u-label-none">
-            <label for="email-ef64" class="u-label">Email</label>
-            <input type="email" placeholder="Zip code" id="email-ef64" name="Zip code" class="u-border-2 u-input u-input-rectangle u-radius-8" required="" maxlength="5" autofocus="autofocus">
-          </div>
-          <div class="u-form-group u-form-submit u-label-none">
-            <a href="#" class="u-border-2 u-border-hover-grey-75 u-btn u-btn-submit u-button-style u-none u-btn-1">Compare Now</a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
-          </div>
-          <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
-          <div class="u-form-send-error u-form-send-message">#FormSendError</div>
-          <input type="hidden" value="" name="recaptchaResponse">
-          <input type="hidden" name="formServices" value="f51dfffa-0dc0-fd9b-e188-6d518246f4b8">
-        </form>
+          <!-- Use placeholder attribute for the zipcode input -->
+          <label for="zipCode"></label>
+          <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" required>
+      
+          <!-- Add a button to continue to the next page -->
+          <button type="button" onclick="continueToSurvey()">Continue</button>
+      </form>      
+
+
       </div><span class="u-file-icon u-icon u-icon-9"><img src="images/2438078.png" alt=""></span>
       <p class="u-custom-font u-font-merriweather u-text u-text-7">No junk ma​il. No spam calls. Free Service.</p>
       <div class="custom-expanded u-container-style u-group u-radius-27 u-shape-round u-white u-group-5">
@@ -123,19 +120,15 @@
       <h2 class="u-align-center u-custom-font u-font-merriweather u-text u-text-3">Start your effortless transfers with as low as $1 transfer and other&nbsp; rewards with just a click. </h2>
       <div class="custom-expanded u-custom-color-2 u-form u-radius-13 u-form-1">
         <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-horizontal u-form-spacing-6 u-inner-form" style="padding: 9px;" source="email">
-          <div class="u-form-email u-form-group u-label-none">
-            <label for="email-ef64" class="u-label">Email</label>
-            <input type="email" placeholder="Zip code" id="email-ef64" name="Zip code" class="u-input u-input-rectangle u-radius-8" required="" maxlength="5" autofocus="autofocus">
-          </div>
-          <div class="u-form-group u-form-submit u-label-none">
-            <a href="#" class="u-border-2 u-border-hover-grey-75 u-btn u-btn-submit u-button-style u-none u-btn-1">Compare Now</a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
-          </div>
-          <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
-          <div class="u-form-send-error u-form-send-message">#FormSendError</div>
-          <input type="hidden" value="" name="recaptchaResponse">
-          <input type="hidden" name="formServices" value="f51dfffa-0dc0-fd9b-e188-6d518246f4b8">
-        </form>
+          <!-- Use placeholder attribute for the zipcode input -->
+          <label for="zipCode"></label>
+          <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" required>
+      
+          <!-- Add a button to continue to the next page -->
+          <button type="button" onclick="continueToSurvey()">Continue</button>
+      </form> 
+
+
       </div><span class="u-file-icon u-hidden-sm u-hidden-xs u-icon u-text-custom-color-2 u-icon-1"><img src="images/2267911-5944742f.png" alt=""></span>
       <h2 class="u-custom-font u-font-merriweather u-text u-text-4">Begin Here</h2>
       <p class="u-custom-font u-font-merriweather u-text u-text-5">No junk mail. No spam calls. Free Service.</p><span class="u-file-icon u-icon u-icon-2"><img src="images/2438078.png" alt=""></span>
@@ -168,6 +161,22 @@
     <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
 background-color: #ffffff !important; transparency: 0 !important
 }</style>
+<script>
+  function continueToSurvey() {
+      var zipCodeInput = document.getElementById('zipCode');
+
+      // Check if the zip code input is not empty
+      if (zipCodeInput.value.trim() !== '') {
+          // Redirect to survey.html if the input is filled
+          window.location.href = './public/survey.html';
+      } else {
+          // If input is empty, alert the user
+          alert('Please enter your Zip Code.');
+          zipCodeInput.focus(); // Focus on the input field for user convenience
+      }
+  }
+</script>
+
     
     
     

@@ -1,0 +1,173 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Example background color */
+    color: #333;
+}
+
+/* Container */
+.survey-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Survey Form Styles */
+.survey-form {
+    flex-basis: 48%; /* Takes half of the container width */
+    order: 2; /* Positioning the form to the right */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    margin-bottom: 20px; /* Spacing between form and info section on smaller screens */
+}
+
+.survey-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between each form element group */
+
+}
+
+.survey-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.survey-form input[type="text"],
+.survey-form input[type="number"],
+.survey-form input[type="email"],
+.survey-form input[type="tel"],
+.survey-form select,
+.survey-form input[type="date"] {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+}
+
+/* Styles for Checkbox and Label Alignment in a Vertical Column */
+.checkbox-group label {
+    display: flex;
+    margin-bottom: 10px; /* Spacing between each checkbox-label pair */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: px; /* Spacing between the checkbox and its label text */
+}
+
+
+/* Contact Information Section */
+/* Styles for Contact Information Section */
+#contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between each form element group */
+}
+
+#contactInfo label {
+    font-weight: bold;
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 5px; /* Spacing between label and input field */
+}
+
+#contactInfo input[type="text"],
+#contactInfo input[type="tel"],
+#contactInfo input[type="email"],
+#contactInfo input[type="date"],
+#contactInfo select {
+    width: 100%; /* Full width to ensure it's on its own line */
+    padding: 8px; /* Padding inside input fields and select box */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 4px; /* Rounded corners for input fields and select box */
+    margin-bottom: 10px; /* Spacing after each input field */
+}
+
+#contactInfo button {
+    padding: 10px 15px; /* Padding inside the button */
+    background-color: #007bff; /* Example button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor change to indicate button */
+}
+
+#contactInfo button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+
+/* Survey Info Styles */
+.survey-info {
+    flex-basis: 48%; /* Takes half of the container width on larger screens */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .survey-form, .survey-info {
+        flex-basis: 100%; /* Full width for both sections on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .survey-form, .survey-info {
+        padding: 10px;
+    }
+}
+/* Loading Page Styles */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Full viewport height */
+    text-align: center;
+}
+
+.loading-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#results-list .result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
