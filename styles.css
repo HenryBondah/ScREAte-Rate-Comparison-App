@@ -56,7 +56,7 @@ button[type="button"]:focus {
 }
 
 /* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   .survey-container,
   .survey-form,
   .survey-info {
@@ -65,7 +65,14 @@ button[type="button"]:focus {
       margin: 0;
       padding: 10px;
   }
-
+  .survey-info {
+    /* Add general styling as needed */
+    padding: 15px;
+    margin-top: 20px; /* Spacing from the previous element */
+    background-color: #f9f9f9; /* Example background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Box shadow for depth */
+  }
   .survey-info {
       order: 2; /* Position the survey info below the form */
   }
