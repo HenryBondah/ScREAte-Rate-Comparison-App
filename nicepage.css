@@ -453,6 +453,7 @@ sup {
 }
 img {
   border-style: none;
+  width: 298px;
 }
 svg:not(:root) {
   overflow: hidden;

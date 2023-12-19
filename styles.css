@@ -53,30 +53,38 @@ button[type="button"]:focus {
   background-color: #f9f9f9; /* Example background color */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Box shadow for depth */
+  width: 100%;
 }
+.survey-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 700px; /* Adjust based on your design preference */
+}
+.img {width: 290px;}
+.survey-form {
+  width: 100%;}
 img {
   max-width: 60%;
   max-height: 40%;
 }
 /* Responsive design for smaller screens */
 @media screen and (max-width: 700px) {
-  .survey-container,
+  .survey-container {
+      flex-direction: column;
+  }
+
   .survey-form,
   .survey-info {
-      flex-direction: column;
       width: 100%;
       margin: 0;
       padding: 10px;
   }
-  .survey-info {
-    /* Add general styling as needed */
-    padding: 15px;
-    margin-top: 20px; /* Spacing from the previous element */
-    background-color: #f9f9f9; /* Example background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Box shadow for depth */
-  }
-  .survey-info {
-      order: 2; /* Position the survey info below the form */
+
+  /* Ensure images within survey-info do not exceed container width */
+  .survey-info img {
+      max-width: 100%;
+      height: auto;
   }
 }
