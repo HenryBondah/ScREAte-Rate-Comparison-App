@@ -45,3 +45,28 @@ button[type="button"]:focus {
   outline: none; /* Removes default focus outline */
   box-shadow: 0 0 0 2px lightblue; /* Custom focus style */
 }
+/* General styles for survey info */
+.survey-info {
+  /* Add general styling as needed */
+  padding: 15px;
+  margin-top: 20px; /* Spacing from the previous element */
+  background-color: #f9f9f9; /* Example background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Box shadow for depth */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .survey-container,
+  .survey-form,
+  .survey-info {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+  }
+
+  .survey-info {
+      order: 2; /* Position the survey info below the form */
+  }
+}
