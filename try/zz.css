@@ -1,0 +1,335 @@
+.survey-container {
+    max-width: 600px; /* Smaller width for a box-like container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    background-color: #fff; /* Optional: Background color for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Shadow for a lifted-box effect */
+ 
+
+}
+
+/* Survey Form Styles */
+.survey-form {
+    width: 100%; /* Full width of the container */
+}
+
+.survey-form form {
+    display: flex;
+    flex-direction: column; /* This ensures vertical stacking */
+    gap: 15px; /* Spacing between each question */
+}
+
+/* Individual question group */
+.question-group {
+    display: flex;
+    flex-direction: column; /* Ensures the label and input/select are on top of each other */
+}
+
+/* Rest of the CSS remains the same */
+
+
+.survey-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.survey-form input[type="text"],
+.survey-form input[type="number"],
+.survey-form input[type="email"],
+.survey-form input[type="tel"],
+.survey-form select,
+.survey-form input[type="date"] {
+    width: 100%; /* Full width of the form */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Styles for Checkbox and Label Alignment in a Vertical Column */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 10px;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 5px;
+}
+
+.form-step {
+    display: grid;
+    
+}
+
+.back-btn, .continue-btn, .submit-btn{
+    width: 100%; /* Full width buttons */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn {
+    background-color: #f44336;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+/* Existing styles ... */
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-btn, .continue-btn, .submit-btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; /* Adjust the width as needed */
+}
+
+.back-btn {
+    background-color: #f44336;
+}
+
+.continue-btn ,.submit-btn {
+    background-color: #4caf50;
+}
+
+/* Rest of your styles ... */
+
+
+
+
+
+
+
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Example background color */
+    color: #333;
+  }
+  
+  /* Page Container */
+  .page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  /* Survey Form Styles */
+  .survey-container {
+    flex: 1;
+    max-width: calc(50% - 40px); /* Adjust for margin */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    order: 2; /* Survey form on the right */
+  }
+  
+  .survey-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .survey-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .survey-form input[type="text"],
+  .survey-form input[type="number"],
+  .survey-form input[type="email"],
+  .survey-form input[type="tel"],
+  .survey-form select,
+  .survey-form input[type="date"],
+  .checkbox-group input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Checkbox and Label Alignment */
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .progress {
+    height: 10px;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 5px;
+  }
+  
+  .form-step {
+    display: none;
+  }
+  
+  /* Button Styles */
+  .back-btn, .continue-btn, .submit-btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; /* Adjust width as needed */
+  }
+  
+  .back-btn {
+    background-color: #f44336;
+  }
+  
+  .continue-btn, .submit-btn {
+    background-color: #4caf50;
+  }
+  
+  /* Button Group Layout */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Survey Info Styles */
+  .survey-info {
+    flex: 1;
+    max-width: calc(50% - 40px); /* Adjust for margin */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .survey-container,
+    .survey-info {
+        flex-basis: 100%;
+        max-width: 100%;
+        order: unset;
+    }
+  
+    .back-btn, .continue-btn, .submit-btn {
+        width: 100%;
+    }
+  }
+  
+  /* Loading Page Styles */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    text-align: center;
+  }
+  
+  .loading-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #results-list .result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Additional styles for images and other elements */
+  .img {
+    width: 290px;
+  }
+  
+  img {
+    max-width: 60%;
+    max-height: 40%;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .survey-form, .survey-info {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .survey-info img {
+        max-width: 100%;
+        height: auto;
+    }
+  }
+  

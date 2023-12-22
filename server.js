@@ -15,14 +15,6 @@ MongoClient.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true 
         const db = client.db('survey_db');
         const surveyCollection = db.collection('surveys');
 
-        app.post('/submit-survey', (req, res) => {
-            surveyCollection.insertOne(req.body)
-                .then(result => {
-                    res.redirect('/loading.html');
-                })
-                .catch(error => console.error(error));
-        });
-
     })
     .catch(console.error);
 

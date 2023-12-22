@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="zz.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <div class="survey-container">
+        <div class="survey-form">
+            <form id="surveyForm" action="http://localhost:3000/submit-survey" method="POST">
+
+                <!-- Progress Bar -->
+                <div id="progressBar" class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+
+                <!-- Step 1: Country Selection -->
+                <div id="step1" class="form-step">
+                    <div class="question-group">
+                        <label for="country">Which country are you sending money to?</label>
+                        <select id="country" name="country" required>
+                            <!-- Populate with countries and currencies -->
+                                <option>select country</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="EE">Estonia</option>
+                                <option value="ET">Ethiopia</option>
+                                <option value="NA">Namibia</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NP">Nepal</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Viet Nam</option>
+                                <option value="VG">Virgin Islands, British</option>
+                                <option value="VI">Virgin Islands, U.s.</option>
+                                <option value="WF">Wallis and Futuna</option>
+                                <option value="EH">Western Sahara</option>
+                                <option value="YE">Yemen</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabwe</option>
+                            </select>
+                        </select>
+                        <label>Is this your first time sending money overseas using a money transfer app? *</label>
+            <div>
+                <input type="radio" id="firstTimeYes" name="firstTime" value="yes" required>
+                <label for="firstTimeYes">Yes</label>
+                <input type="radio" id="firstTimeNo" name="firstTime" value="no">
+                <label for="firstTimeNo">No</label>
+            </div>
+
+            <!-- Previous Apps Checkbox (hidden initially) -->
+            <div id="previousApps" style="display: none;">
+                <label>If not, which of these have you used before?</label>
+                <div>
+                    <input type="checkbox" id="lemfi" name="usedApps" value="LemFi">
+                    <label for="lemfi">LemFi</label>
+                    <input type="checkbox" id="sendwave"      name="usedApps" value="Sendwave">
+                    <label for="sendwave">Sendwave</label>
+                    <!-- Additional checkboxes as needed -->
+                </div>
+            </div>
+                    </div>
+                    <button type="button" class="continue-btn" data-step="2">Continue</button>
+                </div>
+
+                <!-- Step 2: Additional Questions -->
+                <div id="step2" class="form-step" style="display: none;">
+                    <div class="question-group">
+                        <label for="reason-for-shopping">Why are you shopping for a different app? *</label>
+            <select id="reason-for-shopping" name="reason-for-shopping" required>
+                <option value="">Select a reason</option>
+                <option value="better-exchange-rate">To get better exchange rate</option>
+                <option value="better-referral-bonus">For better referral bonus</option>
+                <option value="first-time-transfer-bonus">For better first time transfer bonus</option>
+                <option value="higher-transfer-limits">For higher transfer limits</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="amount">How much do you intend to send? *</label>
+            <input type="number" name="amount" required>
+                    </div>
+                    <!-- More questions... -->
+                    <div class="button-group"></div>
+                    <button type="button" class="back-btn" data-step="1">Back</button>
+                    <button type="button" class="continue-btn" data-step="3">Continue</button>
+                </div>
+                </div>
+
+                <!-- Step 3: Personal Information -->
+                <div id="step3" class="form-step" style="display: none;">
+                    <div class="question-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="telephone">Telephone # (optional)</label>
+                        <input type="tel" id="telephone" name="telephone">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+                        <label for="gender">Gender: *</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        <label for="email">Email: *</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="address1">Address 1: *</label>
+                        <input type="text" id="address1" name="address1" required>
+                        <label for="address2">Address 2 (optional):</label>
+                        <input type="text" id="address2" name="address2">
+                        <label for="city">City: *</label>
+                        <input type="text" id="city" name="city" required>
+                        <label for="state">State: *</label>
+                        <input type="text" id="state" name="state" required>    
+                
+                
+                
+                    </div>
+                    <!-- More personal information fields... -->
+                    <div class="button-group">
+                    <button type="button" class="back-btn" data-step="2">Back</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="/zz.js"></script>
+</body>
+</html>
+
+
+

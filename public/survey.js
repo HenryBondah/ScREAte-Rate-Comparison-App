@@ -34,9 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    surveyForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Add AJAX request to send data to your server here
-        window.location.href = 'loading.html';
-    });
+  
 });
