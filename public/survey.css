@@ -116,13 +116,14 @@ body {
   display: none;
 }
 
-.back-btn, .continue-btn, .submit-btn {
+.back-btn, .continue-btn {
   padding: 10px 15px;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 48%;
+  flex: 1; 
+  margin: 0 2px;
 }
 
 .back-btn {
@@ -136,7 +137,7 @@ body {
 .button-group {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .survey-info {
@@ -148,14 +149,18 @@ body {
 
 @media screen and (max-width: 768px) {
   .survey-container,
-  .survey-info, .form-step  {
-      flex-basis: 100%;
+  .survey-info {
       max-width: 100%;
-      order: unset;
   }
 
   .back-btn, .continue-btn, .submit-btn {
-      width: 100%;
+      width: 48%; 
+      margin: 0 1%; 
+      margin-top: 40px;
+  }
+
+  .button-group {
+      flex-wrap: nowrap; 
   }
 }
 
