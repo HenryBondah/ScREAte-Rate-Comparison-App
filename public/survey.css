@@ -116,14 +116,16 @@ body {
   display: none;
 }
 
-.back-btn, .continue-btn {
+
+
+.back-btn, .continue-btn, .submit-btn {
   padding: 10px 15px;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  flex: 1; 
-  margin: 0 2px;
+  flex: 1;  
+  margin: 0 24px;
 }
 
 .back-btn {
@@ -156,7 +158,6 @@ body {
   .back-btn, .continue-btn, .submit-btn {
       width: 48%; 
       margin: 0 1%; 
-      margin-top: 40px;
   }
 
   .button-group {
