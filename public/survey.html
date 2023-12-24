@@ -58,28 +58,33 @@
                 <!-- Step 1: Country Selection -->
                 <div id="step1" class="form-step">
                   <h6>1/3</h6>
-                  <div class="question-group">
-                      <label for="country">Which country are you sending money to?</label>
-                      <select id="country" name="country" required>
-                          <!-- Populate with countries and currencies -->
-                              <option>select country</option>
-                              <option value="ER">Eritrea</option>
-                              <option value="EE">Estonia</option>
-                              <option value="ET">Ethiopia</option>
-                              <option value="NA">Namibia</option>
-                              <option value="NR">Nauru</option>
-                              <option value="NP">Nepal</option>
-                              <option value="VE">Venezuela</option>
-                              <option value="VN">Viet Nam</option>
-                              <option value="VG">Virgin Islands, British</option>
-                              <option value="VI">Virgin Islands, U.s.</option>
-                              <option value="WF">Wallis and Futuna</option>
-                              <option value="EH">Western Sahara</option>
-                              <option value="YE">Yemen</option>
-                              <option value="ZM">Zambia</option>
-                              <option value="ZW">Zimbabwe</option>
-                          </select>
-                      </select>
+                <div class="question-group">
+                  <label for="country">Which country are you sending money to?</label>
+                  <div class="dropdown-container">
+                      <div id="countryDropdown" class="custom-dropdown">
+                          <div class="selected-value">Select a country</div>
+                          <div class="dropdown-arrow">&#9662;</div> <!-- Dropdown arrow icon -->
+                          <ul class="dropdown-list">
+                              <!-- List items for countries -->
+                              <li data-value="ER"><img src="../images/congo.webp" alt="congo"> Congo - (FCFA)</li>
+                              <li data-value="EE"><img src="../images/cote.webp" alt="cote"> Cote d'Ivoire - (CFA)</li>
+                              <li data-value="ER"><img src="../images/Eritrea.webp" alt="Eritrea"> Eritrea - (ERN)</li>
+                              <li data-value="EE"><img src="../images/Estonia.webp" alt="Estonia"> Estonia - Euro (€)</li>
+                              <li data-value="ER"><img src="../images/Ethiopia.webp" alt="Ethiopia"> Ethiopia - (Br)</li>
+                              <li data-value="EE"><img src="../images/gh.webp" alt="gh"> Ghana - (₵)</li>
+                              <li data-value="ER"><img src="../images/Namibia.webp" alt="Namibia"> Namibia - (N$)</li>
+                              <li data-value="EE"><img src="../images/Nauru.webp" alt="Nauru"> Nauru - (A$)</li>
+                              <li data-value="ER"><img src="../images/Nepal.webp" alt="Nepal"> Nepal - (₨)</li>
+                              <li data-value="EE"><img src="../images/Nigeria.webp" alt="Nigeria"> Nigeria - (₦)</li>
+                              <li data-value="ER"><img src="../images/Zambia.webp" alt="Zambia"> Zambia - (ZK)</li>
+                              <li data-value="EE"><img src="../images/Zimbabwe.webp" alt="Zimbabwe"> Zimbabwe - (Z$)</li>
+
+                          </ul>
+                      </div>
+                      <input type="hidden" id="country" name="country" required>
+                  </div>
+              
+
                       <label>First time sending money overseas using a money transfer app? *</label>
           <div>
               <input type="radio" id="firstTimeYes" name="firstTime" value="yes" required>
@@ -173,6 +178,8 @@
   
     <script src="../survey.js"></script>
     <script src="../form.js"></script>
+    <script src="/public/country.js"></script>
+
 
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-ba03"><div class="u-clearfix u-sheet u-sheet-1">
       <p class="u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-1"> Company<br>

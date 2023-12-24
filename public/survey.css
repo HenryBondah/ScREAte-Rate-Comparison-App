@@ -232,3 +232,64 @@ h6 {
   display: flex;
   justify-content: center; /* Aligns the button to the right */
 }
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+
+
+.question-group {
+  margin-bottom: 15px;
+}
+
+.custom-dropdown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.selected-value {
+  flex-grow: 1;
+}
+
+.dropdown-arrow {
+  pointer-events: none;
+}
+
+.dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000; /* To ensure it's above other content */
+}
+
+.dropdown-list li {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-list li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
